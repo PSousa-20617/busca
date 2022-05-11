@@ -32,6 +32,17 @@ var lootFactors = {0:0.1,1:0.25,2:0.5,3:0.75};
 
 
 //PROGRAM VARIABLES
+async function run_all()
+{
+    if (window.location.href.indexOf('screen=place&mode=scavenge') < 0) {
+        window.location.assign(game_data.link_base_pure + "place&mode=scavenge");
+    }
+    createInterface();
+    startWorker();
+
+    $.ajax({url:window.location.href.split("scavenge")[0] + "units", success:successfunc});
+}
+
 function myconsolelog(arg)
 {
     var mem = JSON.stringify(arg);
