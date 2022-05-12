@@ -32,6 +32,8 @@ var lootFactors = {0:0.1,1:0.25,2:0.5,3:0.75};
 
 
 //PROGRAM VARIABLES
+
+
 async function run_all()
 {
     if (window.location.href.indexOf('screen=place&mode=scavenge') < 0) {
@@ -41,6 +43,17 @@ async function run_all()
     startWorker();
 
     $.ajax({url:window.location.href.split("scavenge")[0] + "units", success:successfunc});
+
+    setTimeout(function(){
+        console.log("changing_page");
+        //$("[class='arrowRight']").click();
+        //$("[class='groupRight']").click();
+
+        setTimeout(function(){
+            console.log("reloading");
+            location.reload();
+       }, 2000)
+    }, refresh_time*1000*(1 + 0.2*Math.random()));
 }
 
 function myconsolelog(arg)
