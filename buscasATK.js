@@ -361,7 +361,7 @@ function resourcesperhour(x, arrayalpha, arrayfactor)
 
 function getAvailableScavanges()
 {
-    var availableScavanges  = [3,2,1]
+    var availableScavanges  = [3,2,1,0]
 
     availableScavanges  = $.grep(availableScavanges, function(obj, index){return $("[class*='free_send_button']",$($("[class^='scavenge-option']")[obj])).length > 0})
     return availableScavanges;
