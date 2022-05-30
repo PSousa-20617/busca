@@ -46,8 +46,8 @@ async function run_all()
 
     setTimeout(function(){
         console.log("changing_page");
-        //$("[class='arrowRight']").click();
-        //$("[class='groupRight']").click();
+        $("[class='arrowRight']").click();
+        $("[class='groupRight']").click();
 
         setTimeout(function(){
             console.log("reloading");
